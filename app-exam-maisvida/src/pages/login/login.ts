@@ -82,6 +82,7 @@ export class LoginPage {
     }
     this.restProvider.authenticateUser(user).then((data: any) => {
       sessionStorage.setItem("user", data);
+      localStorage.setItem("user", JSON.stringify(data));
       this.navCtrl.setRoot(TabsPage);
     }, err => {
       this.presentConfirm();

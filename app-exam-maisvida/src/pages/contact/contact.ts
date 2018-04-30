@@ -11,12 +11,12 @@ export class ContactPage {
   user;
 
   constructor(public navCtrl: NavController, private alertCtrl: AlertController, public navParams: NavParams) {
-    this.user = sessionStorage.getItem("user");
+    this.user = JSON.parse(localStorage.getItem('user'));
   }
 
   logout(): void{
     this.user = undefined;
-    sessionStorage.removeItem("user");
+    localStorage.removeItem("user");
     this.presentConfirm();
   }
 
