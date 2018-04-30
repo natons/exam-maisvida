@@ -1,0 +1,17 @@
+version: '3'
+services:
+  api:
+    image: tomcat
+    container_name: server
+    volumes: 
+      - ./server/artifacts:/usr/local/tomcat/webapps
+    network_mode: host
+    depends_on:
+    - mongo
+    restart: always
+  mongo:
+    image: mongo
+    container_name: mongo
+    ports:
+    - 27017:27017
+    restart: always
