@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Médico {{ doctor.firstName }}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-card-header>
+            Detalhes
+        </ion-card-header>
+
+        <ion-list>
+            <button ion-item>
+                <ion-icon name="person" item-start></ion-icon>
+                {{ doctor.firstName }}
+            </button>
+
+            <button ion-item>
+                <ion-icon name="person" item-start></ion-icon>
+                {{ doctor.lastName }}
+            </button>
+
+            <button ion-item>
+                <ion-icon name="briefcase" item-start></ion-icon>
+                {{ doctor.specialty.name }}
+            </button>
+
+            <button ion-item>
+                <ion-icon name="at" item-start></ion-icon>
+                {{ doctor.email }}
+            </button>
+
+            <button ion-item>
+                <ion-icon name="{{ doctor.active ? 'checkmark-circle' : 'checkmark-circle-outline' }}" item-start></ion-icon>
+                {{ doctor.active ? 'Sim' : 'Não' }}
+            </button>
+
+            <button ion-item>
+                <ion-icon name="pricetags" item-start></ion-icon>
+                {{ doctor.status }}
+            </button>
+
+            <button ion-item>
+                <ion-icon name="pin" item-start></ion-icon>
+                {{ doctor.region.state }}
+            </button>
+
+            <button ion-item>
+                <ion-icon name="pin" item-start></ion-icon>
+                {{ doctor.city.name }}
+            </button>
+
+        </ion-list>
+    </ion-card>
+</ion-content>

@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ajustes
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      Usuário
+    </ion-card-header>
+    <ion-card-content *ngIf="user != undefined" [hidden]="user == undefined">
+      <ion-list>
+        <button ion-item>
+          <ion-icon name="person" item-start></ion-icon>
+          {{ user.name }}
+        </button>
+
+        <button ion-item>
+          <ion-icon name="person" item-start></ion-icon>
+          {{ user.login }}
+        </button>
+
+        <button ion-item>
+          <ion-icon name="medical" item-start></ion-icon>
+          Permissões
+        </button>
+
+        <button ion-item *ngFor="let role of user.roles">
+          <ion-icon name="medical" item-start></ion-icon>
+          {{ role.name }}
+        </button>
+      </ion-list>
+    </ion-card-content>
+    <ion-row no-padding>
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-start (click)="logout()">
+          <ion-icon name='exit'></ion-icon>
+          Sair
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  <ion-list>
+    <ion-list-header>Meu GitHub</ion-list-header>
+    <ion-item>
+      <ion-icon name="logo-github" item-start></ion-icon>
+      @natons
+    </ion-item>
+    <ion-item>
+      <ion-icon name="information-circle" class="information" item-start></ion-icon>
+      <h6>Desenvolvido por Natanael Natons.</h6>
+    </ion-item>
+  </ion-list>
+</ion-content>

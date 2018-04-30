@@ -1,0 +1,35 @@
+<!-- Generated template for the FormUserComponent component -->
+<form [formGroup]="formGroup">
+  <ion-list>
+    <ion-item>
+      <ion-label>
+        Nome
+      </ion-label>
+      <ion-input [(ngModel)]="valueName" type="text" formControlName="name"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="formError.name.active">
+      <h6 class="error"> {{formError.name.message}}</h6>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        Usuário
+      </ion-label>
+      <ion-input [(ngModel)]="valueUsername" type="text" formControlName="username"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="formError.username.active">
+      <h6 class="error"> {{formError.username.message}}</h6>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        Senha
+      </ion-label>
+      <ion-input [(ngModel)]="valuePassword" type="password" formControlName="password"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="formError.password.active">
+      <h6 class="error"> {{formError.password.message}}</h6>
+    </ion-item>
+    <ion-item>
+      <button ion-button full (click)="validateForm()">SALVAR</button>
+    </ion-item>
+  </ion-list>
+</form>

@@ -1,0 +1,36 @@
+<!-- Generated template for the FormUserComponent component -->
+<form [formGroup]="formGroup">
+  <ion-list>
+    <ion-item>
+      <ion-label>Novo Estado</ion-label>
+      <ion-checkbox [(ngModel)]="valueNewState" color="dark" checked="true" formControlName="newState"></ion-checkbox>
+    </ion-item>
+    <ion-item [hidden]="valueNewState">
+      <ion-label>Estado</ion-label>
+      <ion-select [(ngModel)]="valueState" formControlName="state">
+        <ion-option value="{{ regionItem.state }}" *ngFor="let regionItem of regions">{{ regionItem.state }}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item [hidden]="!valueNewState">
+      <ion-label>
+        Estado
+      </ion-label>
+      <ion-input [(ngModel)]="valueState" type="text" formControlName="state"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="formError.state.active">
+      <h6 class="error"> {{formError.state.message}}</h6>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        City
+      </ion-label>
+      <ion-input [(ngModel)]="valueCity" type="text" formControlName="city"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="formError.city.active">
+      <h6 class="error"> {{formError.city.message}}</h6>
+    </ion-item>
+    <ion-item>
+      <button ion-button full (click)="validateForm()">SALVAR</button>
+    </ion-item>
+  </ion-list>
+</form>
