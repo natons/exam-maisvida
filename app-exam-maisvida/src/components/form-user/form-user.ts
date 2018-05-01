@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
-import { RestProvider } from '../../providers/rest/rest';
+import { RestProvider, SAVE_USER, GET_ROLES } from '../../providers/rest/rest';
 import { AlertController, NavController } from 'ionic-angular';
 import { HomePage } from '../../pages/home/home';
 
@@ -16,17 +16,20 @@ import { HomePage } from '../../pages/home/home';
 })
 export class FormUserComponent {
 
-  text: string;
-  access_token;
+  private access_token;
 
   formGroup: FormGroup;
   username: AbstractControl;
   password: AbstractControl;
   name: AbstractControl;
+  isUser: AbstractControl;
+  isAdmin: AbstractControl;
 
   valueUsername;
   valuePassword;
   valueName;
+  valueIsUser = true;
+  valueIsAdmin = false;
 
   formError = {
     username: {
@@ -40,18 +43,22 @@ export class FormUserComponent {
     password: {
       active: false,
       message: ""
+    },
+    roles: {
+      active: false,
+      message: ""
     }
-  } 
+  }
+  
+  roles;
     
 
   constructor(public formBuilder: FormBuilder, public restProvider: RestProvider, 
     public alertCtrl: AlertController, public navCtrl: NavController) {
-    console.log('Hello FormUserComponent Component');
-    this.text = 'Hello World';
     this.buildForm();
     this.restProvider.authenticate("roy", "spring", "password", "write").then(access_token => {
-      console.log("token "+access_token);
       this.access_token = access_token;
+      this.getRoles();
     }, err => {
     });
   }
@@ -61,15 +68,28 @@ export class FormUserComponent {
       username:['', Validators.required],
       name:['', Validators.required],
       password:['', Validators.required],
+      isAdmin:['', Validators.required],
+      isUser:['', Validators.required]
     });
 
     this.username = this.formGroup.controls['username'];
     this.name = this.formGroup.controls['name'];
     this.password = this.formGroup.controls['password'];
+    this.isAdmin = this.formGroup.controls['isAdmin'];
+    this.isUser = this.formGroup.controls['isUser'];
   }
 
   validateForm() {
     let { username, name, password } = this.formGroup.controls;
+
+    if (!this.valueIsAdmin && !this.valueIsUser) {
+      this.formError.roles.active = true;
+      this.formError.roles.message = "Ops! Uma permissão precisa ser concedida!";
+      this.formGroup.controls['isUser'].setErrors({'incorrect': true});
+    } else {
+      this.formError.roles.active = false;
+      this.formError.roles.message = "";
+    }
  
     if (!this.formGroup.valid) {
       if (!username.valid) {
@@ -95,27 +115,43 @@ export class FormUserComponent {
         this.formError.password.active = false;
         this.formError.password.message = "";
       }
+
     } else {
       this.save();
     }
   }
 
+  getRoles(){
+    this.restProvider.get(GET_ROLES, this.access_token).then((data) =>{
+      console.log(data);
+      this.roles = data;
+    }, err => {
+
+    });
+  }
+
+  getRole(roleName){
+    let role;
+    this.roles.forEach(element => {
+      if(element.name === roleName)
+        role = element;
+    });
+    return role;
+  }
+
   save(){
+    let roles = [];
+    if(this.valueIsAdmin){ roles.push(this.getRole("ROLE_ADMIN")) }
+    if(this.valueIsUser){ roles.push(this.getRole("ROLE_USER")) }
     let user = {
       name: this.valueName,
       password: this.valuePassword,
       login: this.valueUsername,
-      roles : [{
-        name: 'ROLE_USER',
-      }, {
-        name: 'ROLE_ADMIN',
-      }
-      ]
+      roles : roles
     }
-    this.restProvider.saveUser(user, this.access_token).then((data) => {
+    this.restProvider.post(SAVE_USER, this.access_token, user).then((data) => {
       this.presentAlert("Operação Realizada com sucesso!");
     }, err => {
-      console.log(err);
       this.presentAlert("Operação não realizada!")
     })
   }

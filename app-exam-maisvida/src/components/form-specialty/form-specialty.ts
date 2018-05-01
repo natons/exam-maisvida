@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, AbstractControl, Validators, FormBuilder } from '@angular/forms';
 import { AlertController, NavController } from 'ionic-angular';
-import { RestProvider } from '../../providers/rest/rest';
+import { RestProvider, SAVE_SPECIALTY } from '../../providers/rest/rest';
 import { HomePage } from '../../pages/home/home';
 
 /**
@@ -16,7 +16,7 @@ import { HomePage } from '../../pages/home/home';
 })
 export class FormSpecialtyComponent {
 
-  access_token;
+  private access_token;
 
   formGroup: FormGroup;
   name: AbstractControl;
@@ -34,7 +34,6 @@ export class FormSpecialtyComponent {
     public alertCtrl: AlertController, public navCtrl: NavController) {
     this.buildForm();
     this.restProvider.authenticate("roy", "spring", "password", "write").then(access_token => {
-      console.log("token "+access_token);
       this.access_token = access_token;
     }, err => {
     });
@@ -68,10 +67,9 @@ export class FormSpecialtyComponent {
     let specialty = {
       name: this.valueName,
     }
-    this.restProvider.saveSpecialty(specialty, this.access_token).then((data) => {
+    this.restProvider.post(SAVE_SPECIALTY, this.access_token, specialty).then((data) => {
       this.presentAlert("Operação Realizada com sucesso!");
     }, err => {
-      console.log(err);
       this.presentAlert("Operação não realizada!")
     })
   }

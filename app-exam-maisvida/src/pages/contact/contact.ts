@@ -15,8 +15,6 @@ export class ContactPage {
   }
 
   logout(): void{
-    this.user = undefined;
-    localStorage.removeItem("user");
     this.presentConfirm();
   }
 
@@ -35,6 +33,8 @@ export class ContactPage {
         {
           text: 'Sim',
           handler: () => {
+            this.user = undefined;
+            localStorage.removeItem("user");
             this.navCtrl.setRoot(LoginPage);
           }
         }

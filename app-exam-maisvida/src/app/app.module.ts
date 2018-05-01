@@ -18,6 +18,8 @@ import { LoginPage } from '../pages/login/login';
 import { FormUserComponent } from '../components/form-user/form-user';
 import { FormRegionComponent } from '../components/form-region/form-region';
 import { FormSpecialtyComponent } from '../components/form-specialty/form-specialty';
+import { FormDoctorComponent } from '../components/form-doctor/form-doctor';
+import { FormLoginComponent } from '../components/form-login/form-login';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { FormSpecialtyComponent } from '../components/form-specialty/form-specia
     LoginPage,
     FormUserComponent,
     FormRegionComponent,
-    FormSpecialtyComponent
+    FormSpecialtyComponent,
+    FormDoctorComponent,
+    FormLoginComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +52,9 @@ import { FormSpecialtyComponent } from '../components/form-specialty/form-specia
     LoginPage,
     FormUserComponent,
     FormRegionComponent,
-    FormSpecialtyComponent
+    FormSpecialtyComponent,
+    FormDoctorComponent,
+    FormLoginComponent
   ],
   providers: [
     StatusBar,

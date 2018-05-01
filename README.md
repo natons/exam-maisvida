@@ -12,7 +12,7 @@ Requisitos
 * [Java 8](http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html)
 * [Gradle](https://gradle.org/) ou [Maven](https://maven.apache.org/)
 * (Sugestão de IDE) [IntelliJ IDEA](https://www.jetbrains.com/idea/)
-* Certifique-se que as portas __27017__, __8080__ e 8100 estejam liberadas
+* Certifique-se que as portas __27017__, __8080__ e __8100__ estejam liberadas
 
 
 Execução

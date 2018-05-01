@@ -30,7 +30,7 @@ public class UserController {
         try {
             this.repository.save(user);
         } catch (Exception e) {
-            throw new MultipartException("Error in create doctor: " + e.getMessage());
+            throw new MultipartException("Error in create user: " + e.getMessage());
         }
 
 

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
-import { RestProvider } from '../../providers/rest/rest';
+import { RestProvider, GET_DOCTORS, DELETE_DOCTOR } from '../../providers/rest/rest';
 import { DoctorDetailsPage } from '../doctor-details/doctor-details';
 
 @Component({
@@ -8,6 +8,8 @@ import { DoctorDetailsPage } from '../doctor-details/doctor-details';
   templateUrl: 'home.html'
 })
 export class HomePage {
+
+  isUser = true;
 
   doctors = [];
   error: any;
@@ -25,21 +27,28 @@ export class HomePage {
 
   ionViewWillEnter(){
     this.restProvider.authenticate("roy", "spring", "password", "write").then(access_token => {
-      console.log("token "+access_token);
       this.access_token = access_token;
       this.getDoctors();
     }, err => {
     });
+    this.isUser = this.getRole("ROLE_USER");
+  }
+
+  private getRole(roleName): boolean{
+    let user = JSON.parse(localStorage.getItem('user'));
+    let role = false;
+    user.roles.forEach(element => {
+      if(element.name === roleName)
+        role = true
+    });
+    return role;
   }
 
   getDoctors(){
-    this.restProvider.getDoctors(this.access_token)
+    this.restProvider.get(GET_DOCTORS, this.access_token)
         .then((data: any) => {
           this.doctors = data;
-          console.log("Aqui vem os dados");
-          console.log(data);
         }, err => {
-          console.log(err)
           this.error = err;
         });
   }
@@ -69,10 +78,9 @@ export class HomePage {
 
 
   deleteDoctor(id): void {
-    this.restProvider.deleteDoctor(id, this.access_token).then((data: any) => {
+    this.restProvider.delete(DELETE_DOCTOR, this.access_token, id).then((data: any) => {
       this.getDoctors();
     }, err =>{
-
     });
   }
 }

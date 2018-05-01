@@ -14,7 +14,7 @@
         <button ion-button icon-only (click)="showDetails(doctor)">
           <ion-icon name="eye"></ion-icon>
         </button>
-        <button color="danger" ion-button icon-only (click)="presentConfirm(doctor.id, doctor.firstName)">
+        <button color="danger" *ngIf="isUser" ion-button icon-only (click)="presentConfirm(doctor.id, doctor.firstName)">
           <ion-icon name="remove-circle"></ion-icon>
         </button>
       </ion-item-options>

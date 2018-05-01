@@ -3,12 +3,18 @@ import { Injectable } from '@angular/core';
 import { StringBuilder } from 'typescript-string-operations';
 
 
-/*
-  Generated class for the RestProvider provider.
+export const GET_DOCTORS: string = "/doctor/get/all?access_token=";
+export const GET_SPECIALTIES: string = "/specialty/get/all?access_token=";
+export const GET_REGIONS: string = "/region/get/all?access_token=";
+export const GET_ROLES: string = "/role/get/all?access_token=";
+export const SAVE_DOCTOR: string = "/doctor/save?access_token=";
+export const SAVE_USER: string = "/user/save?access_token=";
+export const SAVE_REGION: string = "/region/save?access_token=";
+export const SAVE_SPECIALTY: string = "/specialty/save?access_token=";
+export const DELETE_DOCTOR: string = "/doctor/delete?access_token=";
+export const AUTHENTICATE_USER: string = "/login/authenticate";
 
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
+
 @Injectable()
 export class RestProvider {
 
@@ -20,16 +26,24 @@ export class RestProvider {
   }
 
   constructor(public http: HttpClient) {
-    console.log('Initializing.. RestServiceProvider Provider');
+  }
+
+  private isValid(...params: string[]): boolean{
+    for(let param of params){
+      if(param === undefined || param.trim().length === 0)
+        return false;
+    }
+
+    return true;
   }
 
   public authenticate(username:string, password:string, grantType:string, scope:string) {
     return new Promise((resolve, reject) => {
       if(!this.isValid(username, password, grantType, scope))
-        reject();
+        reject("invalida datas");
 
-      this.buildOAuth2Url(password, username, grantType, scope);
-      this.getToken().then((data: any) => {
+      let user = this.getParametersToToken(password, username, grantType, scope);
+      this.getToken(user).then((data: any) => {
         resolve(data.access_token);
       }, err => {
         reject(err);
@@ -37,33 +51,23 @@ export class RestProvider {
     });
   }
 
-  private isValid(...params: string[]): boolean{
-    for(let param of params){
-      if(param == undefined || param.trim().length == 0)
-        return false;
-    }
-
-    return true;
-  }
-
-  private buildOAuth2Url(password, username, grantType, scope) {
+  private getParametersToToken(password, username, grantType, scope) {
     let stringBuilder = new StringBuilder();
-    //stringBuilder.Append(this.oauth2Url+"?");
     stringBuilder.Append("password="+password);
     stringBuilder.Append("&username="+username);
     stringBuilder.Append("&grant_type="+grantType);
     stringBuilder.Append("&scope=read%20write");
-    this.oauth2Url = stringBuilder.ToString();
+    return stringBuilder.ToString();
   }
 
-  private getToken() {
+  private getToken(user) {
     return new Promise((resolve, reject) => {
       let headers = new HttpHeaders({
         "Content-Type": "application/x-www-form-urlencoded; charset=utf-8",
         "Authorization": "Basic " + btoa(this.credentials.client_id + ':' + this.credentials.client_secret),
       });
 
-      this.http.post(`${this.apiUrl}/oauth/token`, this.oauth2Url, {headers: headers})
+      this.http.post(`${this.apiUrl}${this.oauth2Url}`, user, {headers: headers})
         .subscribe((data: any) => {
           resolve(data);
         }, err => {
@@ -72,57 +76,22 @@ export class RestProvider {
     });
   }
 
-  getDoctors(access_token) {
+  get(path, access_token) {
     return new Promise((resolve, reject) => {
-      if (access_token == undefined)
-        return reject("invalid token!");
 
-      this.http.get(this.apiUrl + '/doctor/get/all' + '?access_token=' + access_token)
+      this.http.get(this.apiUrl + path + access_token)
         .subscribe(data => {
           resolve(data);
         }, err => {
-          console.log(err);
           reject(err);
         });
     });
   }
 
-  getSpecialties(access_token) {
+  post(path, access_token, data){
     return new Promise((resolve, reject) => {
-      if (access_token == undefined)
-        return reject("invalid token!");
-
-      this.http.get(this.apiUrl + '/specialty/get/all' + '?access_token=' + access_token)
-        .subscribe(data => {
-          resolve(data);
-        }, err => {
-          console.log(err);
-          reject(err);
-        });
-    });
-  }
-
-  getRegions(access_token) {
-    return new Promise((resolve, reject) => {
-      if (access_token == undefined)
-        return reject("invalid token!");
-
-      this.http.get(this.apiUrl + '/region/get/all' + '?access_token=' + access_token)
-        .subscribe(data => {
-          resolve(data);
-        }, err => {
-          console.log(err);
-          reject(err);
-        });
-    });
-  }
-
-  deleteDoctor(id, access_token){
-    return new Promise((resolve, reject) => {
-      if(!this.isValid(id, access_token))
-        return reject("invalid datas!");
       
-      this.http.delete(`${this.apiUrl}/doctor/delete?id=${id}&access_token=${access_token}`)
+      this.http.post(`${this.apiUrl}${path}${access_token}`, data)
         .subscribe(data => {
             resolve(data);
         }, err => {
@@ -131,12 +100,12 @@ export class RestProvider {
     });
   }
 
-  saveDoctor(doctor, access_token){
+  postNoToken(path, data){
     return new Promise((resolve, reject) => {
-      if(!this.isValid(access_token))
+      if(!this.isValid(path))
         return reject("invalid datas!");
       
-      this.http.post(`${this.apiUrl}/doctor/save?access_token=${access_token}`, doctor)
+      this.http.post(`${this.apiUrl}${path}`, data)
         .subscribe(data => {
             resolve(data);
         }, err => {
@@ -145,12 +114,12 @@ export class RestProvider {
     });
   }
 
-  saveUser(user, access_token){
+  delete(path, access_token, id){
     return new Promise((resolve, reject) => {
-      if(!this.isValid(access_token))
+      if(!this.isValid(path, access_token))
         return reject("invalid datas!");
       
-      this.http.post(`${this.apiUrl}/user/save?access_token=${access_token}`, user)
+      this.http.delete(`${this.apiUrl}${path}${access_token}&id=${id}`)
         .subscribe(data => {
             resolve(data);
         }, err => {
@@ -158,47 +127,4 @@ export class RestProvider {
         });
     });
   }
-
-  saveRegion(region, access_token){
-    return new Promise((resolve, reject) => {
-      if(!this.isValid(access_token))
-        return reject("invalid datas!");
-      
-      this.http.post(`${this.apiUrl}/region/save?access_token=${access_token}`, region)
-        .subscribe(data => {
-            resolve(data);
-        }, err => {
-            reject(err);
-        });
-    });
-  }
-
-  saveSpecialty(region, access_token){
-    return new Promise((resolve, reject) => {
-      if(!this.isValid(access_token))
-        return reject("invalid datas!");
-      
-      this.http.post(`${this.apiUrl}/specialty/save?access_token=${access_token}`, region)
-        .subscribe(data => {
-            resolve(data);
-        }, err => {
-            reject(err);
-        });
-    });
-  }
-
-  authenticateUser(user) {
-    return new Promise((resolve, reject) => {
-      if(!this.isValid(user.login, user.password))
-        return reject("invalid datas!");
-      
-      this.http.post(`${this.apiUrl}/login/authenticate`, user)
-        .subscribe((data: any) => {
-            resolve(data);
-        }, err => {
-            reject(err);
-        });
-    });
-  }
-
 }

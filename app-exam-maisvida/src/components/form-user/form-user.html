@@ -29,6 +29,17 @@
       <h6 class="error"> {{formError.password.message}}</h6>
     </ion-item>
     <ion-item>
+      <ion-label>Usuário</ion-label>
+      <ion-checkbox [(ngModel)]="valueIsUser" color="dark" checked="true" formControlName="isUser"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Administrador</ion-label>
+      <ion-checkbox [(ngModel)]="valueIsAdmin" color="dark" checked="false" formControlName="isAdmin"></ion-checkbox>
+    </ion-item>
+    <ion-item *ngIf="formError.roles.active">
+      <h6 class="error"> {{formError.roles.message}}</h6>
+    </ion-item>
+    <ion-item>
       <button ion-button full (click)="validateForm()">SALVAR</button>
     </ion-item>
   </ion-list>

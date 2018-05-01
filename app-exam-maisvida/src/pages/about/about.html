@@ -1,16 +1,19 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-navbar *ngIf="isUser && !isAdmin">
+    <ion-title>Inserir Médico</ion-title>
+  </ion-navbar>
+  <ion-toolbar *ngIf="isAdmin">
     <ion-segment [(ngModel)]="insert">
-      <ion-segment-button value="doctor">
+      <ion-segment-button value="doctor" *ngIf="isUser">
         Médico
       </ion-segment-button>
-      <ion-segment-button value="user">
+      <ion-segment-button value="user" *ngIf="isAdmin">
         Usuário
       </ion-segment-button>
-      <ion-segment-button value="region">
+      <ion-segment-button value="region" *ngIf="isAdmin">
         Região
       </ion-segment-button>
-      <ion-segment-button value="specialty">
+      <ion-segment-button value="specialty" *ngIf="isAdmin">
         Especialidade
       </ion-segment-button>
     </ion-segment>
@@ -21,86 +24,7 @@
 
   <div [ngSwitch]="insert">
     <ion-list *ngSwitchCase="'doctor'">
-      <form [formGroup]="formGroup">
-        <ion-list>
-          <ion-item>
-            <ion-label>
-              Firstname
-            </ion-label>
-            <ion-input [(ngModel)]="valueFirstName" type="text" formControlName="firstName"></ion-input>
-          </ion-item>
-          <ion-item *ngIf="formError.email.active">
-            <h6 class="error"> {{formError.email.message}}</h6>
-          </ion-item>
-          <ion-item>
-            <ion-label>
-              Lastname
-            </ion-label>
-            <ion-input [(ngModel)]="valueLastName" type="text" formControlName="lastName"></ion-input>
-          </ion-item>
-          <ion-item *ngIf="formError.lastName.active">
-            <h6 class="error"> {{formError.lastName.message}}</h6>
-          </ion-item>
-          <ion-item>
-            <ion-label>
-              Email
-            </ion-label>
-            <ion-input [(ngModel)]="valueEmail" type="email" formControlName="email"></ion-input>
-          </ion-item>
-          <ion-item *ngIf="formError.email.active">
-            <h6 class="error"> {{formError.email.message}}</h6>
-          </ion-item>
-          <ion-item>
-            <ion-label>Ativo</ion-label>
-            <ion-checkbox [(ngModel)]="valueActive" color="dark" checked="true" formControlName="active"></ion-checkbox>
-          </ion-item>
-          <ion-item *ngIf="formError.active.active">
-            <h6 class="error"> {{formError.active.message}}</h6>
-          </ion-item>
-          <ion-item>
-            <ion-label>Status</ion-label>
-            <ion-select [(ngModel)]="valueStatus" formControlName="status" interface="action-sheet">
-              <ion-option value="Disponível">Disponível</ion-option>
-              <ion-option value="Ocupado">Ocupado</ion-option>
-            </ion-select>
-          </ion-item>
-          <ion-item *ngIf="formError.status.active">
-            <h6 class="error"> {{formError.status.message}}</h6>
-          </ion-item>
-          <ion-item>
-            <ion-label>Especialidade</ion-label>
-            <ion-select [(ngModel)]="valueSpecialty" formControlName="specialty">
-              <ion-option value="{{ specialtyItem.name }}" *ngFor="let specialtyItem of specialties">{{ specialtyItem.name }}</ion-option>
-            </ion-select>
-          </ion-item>
-          <ion-item *ngIf="formError.specialty.active">
-            <h6 class="error"> {{formError.specialty.message}}</h6>
-          </ion-item>
-          <ion-item>
-            <ion-label>Estado</ion-label>
-            <ion-select [(ngModel)]="valueState" formControlName="state">
-              <ion-option value="{{ regionItem.state }}" *ngFor="let regionItem of regions">{{ regionItem.state }}</ion-option>
-            </ion-select>
-          </ion-item>
-          <ion-item *ngIf="formError.state.active">
-            <h6 class="error"> {{formError.state.message}}</h6>
-          </ion-item>
-          <div *ngFor="let regionItem of regions">
-            <ion-item [hidden]="valueState !== regionItem.state">
-              <ion-label>Cidade</ion-label>
-              <ion-select [(ngModel)]="valueCity" formControlName="city">
-                <ion-option value="{{ cityItem.name }}" *ngFor="let cityItem of regionItem.cities">{{ cityItem.name }}</ion-option>
-              </ion-select>
-            </ion-item>
-          </div>
-          <ion-item *ngIf="formError.city.active && (valueCity == undefined || valueCity.length == 0)">
-            <h6 class="error"> {{formError.city.message}}</h6>
-          </ion-item>
-          <ion-item>
-            <button ion-button full (click)="validateForm()">SALVAR</button>
-          </ion-item>
-        </ion-list>
-      </form>
+      <form-doctor></form-doctor>
     </ion-list>
     <ion-list *ngSwitchCase="'user'">
       <form-user></form-user>

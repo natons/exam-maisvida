@@ -1,22 +1,17 @@
 import { Component } from '@angular/core';
 import { AlertController, NavController } from 'ionic-angular';
 import { FormBuilder, FormGroup, AbstractControl, Validators } from '@angular/forms';
-import { RestProvider } from '../../providers/rest/rest';
+import { RestProvider, GET_REGIONS, SAVE_REGION } from '../../providers/rest/rest';
 import { HomePage } from '../../pages/home/home';
 
-/**
- * Generated class for the FormRegionComponent component.
- *
- * See https://angular.io/api/core/Component for more info on Angular
- * Components.
- */
+
 @Component({
   selector: 'form-region',
   templateUrl: 'form-region.html'
 })
 export class FormRegionComponent {
 
-  access_token;
+  private access_token;
 
   formGroup: FormGroup;
   state: AbstractControl;
@@ -49,12 +44,12 @@ export class FormRegionComponent {
     public alertCtrl: AlertController, public navCtrl: NavController) {
     this.buildForm();
     this.restProvider.authenticate("roy", "spring", "password", "write").then(access_token => {
-      console.log("token "+access_token);
       this.access_token = access_token;
       this.getRegions();
     }, err => {
     });
   }
+
   ionViewWillEnter(){
     this.getRegions();
   }
@@ -72,10 +67,9 @@ export class FormRegionComponent {
   }
 
   private getRegions(){
-    this.restProvider.getRegions(this.access_token).then((data) => {
+    this.restProvider.get(GET_REGIONS, this.access_token).then((data) => {
       this.regions = data;
     }, err => {
-
     });
   }
 
@@ -130,11 +124,9 @@ export class FormRegionComponent {
         }
       ],
     }
-    console.log(region);
-    this.restProvider.saveRegion(region, this.access_token).then((data) => {
+    this.restProvider.post(SAVE_REGION, this.access_token, region).then((data) => {
       this.presentAlert("Operação Realizada com sucesso!");
     }, err => {
-      console.log(err);
       this.presentAlert("Operação não realizada!")
     })
   }

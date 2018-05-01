@@ -1,0 +1,25 @@
+<form [formGroup]="formGroup">
+  <ion-list>
+    <ion-item>
+      <ion-label>
+        Usuário
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="valueUsername" formControlName="username"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="formError.username.active">
+      <h6 class="error"> {{formError.username.message}}</h6>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        Senha
+      </ion-label>
+      <ion-input type="password" [(ngModel)]="valuePassword" formControlName="password"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="formError.password.active">
+      <h6 class="error"> {{ formError.password.message }}</h6>
+    </ion-item>
+    <ion-item>
+      <button ion-button full (click)="validateForm()">Entrar</button>
+    </ion-item>
+  </ion-list>
+</form>

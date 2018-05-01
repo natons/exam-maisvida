@@ -50,7 +50,7 @@ public class OAuth2ServerConfiguration {
             // @formatter:off
             http
                     .authorizeRequests()
-                    .antMatchers("/doctor/**", "/user/**", "/region/**", "/specialty/**").authenticated()
+                    .antMatchers("/doctor/**", "/user/**", "/region/**", "/specialty/**", "/role/**").authenticated()
                     .anyRequest()
                     .permitAll();
                     //.antMatchers("/doctor/**").hasRole("ADMIN")

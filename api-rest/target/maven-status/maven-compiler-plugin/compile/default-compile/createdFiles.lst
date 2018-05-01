@@ -12,10 +12,12 @@ exam/maisvida/med/br/controller/RegionController.class
 exam/maisvida/med/br/repository/RegionRepository.class
 exam/maisvida/med/br/repository/DoctorRepository.class
 exam/maisvida/med/br/controller/DoctorController.class
+exam/maisvida/med/br/repository/RoleRepository.class
 exam/maisvida/med/br/model/Specialty.class
 exam/maisvida/med/br/model/Region.class
 exam/maisvida/med/br/exception/ObjectAlreadyExistsException.class
 exam/maisvida/med/br/config/SwaggerConfig.class
+exam/maisvida/med/br/controller/RoleController.class
 exam/maisvida/med/br/Application.class
 exam/maisvida/med/br/config/OAuth2ServerConfiguration$AuthorizationServerConfiguration.class
 exam/maisvida/med/br/config/OAuth2ServerConfiguration.class
