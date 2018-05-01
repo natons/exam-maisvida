@@ -52,8 +52,9 @@ npm install
 ionic serve -l
 ```
 5. Pronto, a aplicação já estará funcionando no endereço: __http://localhost:8100/ionic-lab__
-6. A API, está funcionando no endereço __http://localhost:8080__
-7. A documentação da API, pode ser acessada pelo endereço: __http://localhost:8080/swagger-ui.html__
+6. As credenciais para se logar no app são: usuário __roy__ senha __spring__
+7. A API, está funcionando no endereço __http://localhost:8080__
+8. A documentação da API, pode ser acessada pelo endereço: __http://localhost:8080/swagger-ui.html__
 
 Novo Build
 ================
