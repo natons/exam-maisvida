@@ -32,6 +32,10 @@ public class Doctor {
     public Doctor() {
     }
 
+    public Doctor(String firstName) {
+        this.firstName = firstName;
+    }
+
     public Doctor(String firstName, String lastName, String email, Boolean active, String status, Specialty specialty, Region region, City city) {
         this.firstName = firstName;
         this.lastName = lastName;
