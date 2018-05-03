@@ -1,2 +1,7 @@
-exam/maisvida/med/br/HomeControllerTest.class
+exam/maisvida/med/br/RegionControllerTest.class
+exam/maisvida/med/br/UserControllerTest.class
 exam/maisvida/med/br/DoctorControllerTest.class
+exam/maisvida/med/br/SpecialtyControllerTest.class
+exam/maisvida/med/br/HomeControllerTest.class
+exam/maisvida/med/br/LoginControllerTest.class
+exam/maisvida/med/br/RoleControllerTest.class

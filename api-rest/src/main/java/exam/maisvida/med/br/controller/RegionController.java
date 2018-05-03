@@ -1,9 +1,11 @@
 package exam.maisvida.med.br.controller;
 
+import exam.maisvida.med.br.model.Doctor;
 import exam.maisvida.med.br.model.Region;
 import exam.maisvida.med.br.service.RegionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,9 +20,10 @@ public class RegionController {
 
     @PostMapping("/save")
     public ResponseEntity<Region> regionSave(@RequestBody Region region) {
+        HttpStatus status = region.getId() == null ?  HttpStatus.CREATED : HttpStatus.OK;
         region = service.regionSave(region);
 
-        return new ResponseEntity<>(region, HttpStatus.CREATED);
+        return new ResponseEntity<>(region, status);
 
     }
 

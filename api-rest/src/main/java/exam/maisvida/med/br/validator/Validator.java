@@ -37,8 +37,8 @@ public abstract class Validator {
 
     public static Boolean fieldsWereFilled(Object... fields){
         for(Object field: fields){
-            String fieldString = field.toString();
-            if(fieldString.isEmpty() || fieldString.trim().length() == 0){
+            String fieldString = field == null ? null : field.toString();
+            if(fieldString == null || fieldString.isEmpty() || fieldString.trim().length() == 0){
                 return Boolean.FALSE;
             }
         }
@@ -67,7 +67,11 @@ public abstract class Validator {
     }
 
     public static boolean regionIsValid(Region region) {
-        return fieldsWereFilled(region.getState());
+        boolean flag = false;
+        if(region.getCities() != null)
+            for(City city: region.getCities())
+                flag = cityIsValid(city);
+        return fieldsWereFilled(region.getState()) && flag;
     }
 
     public static boolean specialtyIsValid(Specialty specialty) {

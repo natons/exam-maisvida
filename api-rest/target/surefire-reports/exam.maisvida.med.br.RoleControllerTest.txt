@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: exam.maisvida.med.br.RoleControllerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.077 s - in exam.maisvida.med.br.RoleControllerTest

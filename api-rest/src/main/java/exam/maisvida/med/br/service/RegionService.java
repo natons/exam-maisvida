@@ -31,32 +31,28 @@ public class RegionService {
             throw new ObjectIncorrectException("All fields need to be filled in!");
         }
 
-        City cityFind = null;
-        for (int index = 0; index < region.getCities().size() && cityFind == null; index++){
-            cityFind = cityRepository.findByName(region.getCities().get(index).getName());
-        }
-
-        if(cityFind != null){
-            throw new ObjectAlreadyExistsException("City Already Exists!");
-        }
-
         Region regionFind = this.repository.findByState(region.getState());
-        if(regionFind != null){
-            List<City> citiesToAdd = new ArrayList<>();
-            for(City city: regionFind.getCities()){
-                boolean exists = false;
-                for(City city1: region.getCities()){
-                    if(city.getName() == city1.getName()){
-                        exists = true;
-                    }
-                }
-                if(!exists)
-                    citiesToAdd.add(city);
-                exists = false;
+        if(regionFind != null && region.getId() != null && regionFind.getId().equals(region.getId())){
+            City cityFind = null;
+            for (int index = 0; index < region.getCities().size() && cityFind == null; index++){
+                cityFind = cityRepository.findByName(region.getCities().get(index).getName());
             }
-            region.getCities().addAll(citiesToAdd);
+
+            if(cityFind != null){
+                throw new ObjectAlreadyExistsException("City Already Exists!");
+            }
+
+            region.getCities().addAll(citiesToAdd(region, regionFind));
+        } else if(regionFind != null){
+            throw new ObjectAlreadyExistsException("Region Already Exists!");
         }
 
+        region = executeSave(region);
+
+        return region;
+    }
+
+    private Region executeSave(Region region){
         try {
             for(City city: region.getCities()){
                 this.cityRepository.save(city);
@@ -69,32 +65,30 @@ public class RegionService {
         return region;
     }
 
+    private List<City> citiesToAdd(Region region, Region regionFind){
+        List<City> citiesToAdd = new ArrayList<>();
+        for(City city: regionFind.getCities()){
+            boolean exists = false;
+            for(City city1: region.getCities()){
+                if(city.getName() == city1.getName()){
+                    exists = true;
+                }
+            }
+            if(!exists)
+                citiesToAdd.add(city);
+            exists = false;
+        }
+
+        return citiesToAdd;
+    }
+
     public Region save(Region region){
         Region regionFind = this.repository.findByState(region.getState());
         if(regionFind != null){
-            List<City> citiesToAdd = new ArrayList<>();
-            for(City city: regionFind.getCities()){
-                boolean exists = false;
-                for(City city1: region.getCities()){
-                    if(city.getName() == city1.getName()){
-                        exists = true;
-                    }
-                }
-                if(!exists)
-                    citiesToAdd.add(city);
-                exists = false;
-            }
-            region.getCities().addAll(citiesToAdd);
+            region.getCities().addAll(citiesToAdd(region, regionFind));
         }
 
-        try {
-            for(City city: region.getCities()){
-                this.cityRepository.save(city);
-            }
-            this.repository.save(region);
-        } catch (Exception e) {
-            throw new MultipartException("Error in create region: " + e.getMessage());
-        }
+        region = executeSave(region);
 
         return region;
     }

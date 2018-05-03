@@ -20,9 +20,10 @@ public class SpecialtyController {
 
     @PostMapping("/save")
     public ResponseEntity<Specialty> specialtySave(@RequestBody Specialty specialty) {
+        HttpStatus status = specialty.getId() == null ? HttpStatus.CREATED : HttpStatus.OK;
         specialty = service.specialtySave(specialty);
 
-        return new ResponseEntity<>(specialty, HttpStatus.CREATED);
+        return new ResponseEntity<>(specialty, status);
 
     }
 

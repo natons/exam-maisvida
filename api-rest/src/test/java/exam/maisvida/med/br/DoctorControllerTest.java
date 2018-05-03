@@ -2,7 +2,6 @@ package exam.maisvida.med.br;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import exam.maisvida.med.br.model.Doctor;
-import exam.maisvida.med.br.service.CityService;
 import exam.maisvida.med.br.service.DoctorService;
 import exam.maisvida.med.br.service.RegionService;
 import exam.maisvida.med.br.service.SpecialtyService;
@@ -30,7 +29,7 @@ public class DoctorControllerTest {
     private MockMvc mvc;
 
     @Autowired
-    ObjectMapper objectMapper;
+    private ObjectMapper objectMapper;
 
     @Autowired
     private SpecialtyService specialtyService;
@@ -43,18 +42,22 @@ public class DoctorControllerTest {
 
     private String access_token;
 
+    private static final String CLIENT_ID = "clientapp";
+    private static final String CLIENT_SECRET = "123456";
+
+    private static final String VALID_USER = "roy";
+    private static final String VALID_PASSWORD = "spring";
+
     @Before
     public void setUp() throws Exception {
         doctorService.deleteAll();
-        access_token = getAccessToken("roy", "spring");
+        access_token = getAccessToken(VALID_USER, VALID_PASSWORD);
     }
 
     private String getAccessToken(String username, String password) throws Exception {
         String authorization = "Basic "
-                + new String(Base64Utils.encode("clientapp:123456".getBytes()));
-        String contentType = MediaType.APPLICATION_JSON + ";charset=UTF-8";
+                + new String(Base64Utils.encode(String.format("%s:%s", CLIENT_ID, CLIENT_SECRET).getBytes()));
 
-        // @formatter:off
         String content = mvc
                 .perform(
                         post("/oauth/token")
@@ -65,18 +68,16 @@ public class DoctorControllerTest {
                                 .param("password", password)
                                 .param("grant_type", "password")
                                 .param("scope", "read write")
-                                .param("client_id", "clientapp")
-                                .param("client_secret", "123456"))
+                                .param("client_id", CLIENT_ID)
+                                .param("client_secret", CLIENT_SECRET))
                 .andExpect(status().isOk())
-                .andExpect(content().contentType(contentType))
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
                 .andExpect(jsonPath("$.access_token", is(notNullValue())))
                 .andExpect(jsonPath("$.token_type", is(equalTo("bearer"))))
                 .andExpect(jsonPath("$.refresh_token", is(notNullValue())))
                 .andExpect(jsonPath("$.expires_in", is(greaterThan(4000))))
                 .andExpect(jsonPath("$.scope", is(equalTo("read write"))))
                 .andReturn().getResponse().getContentAsString();
-
-        // @formatter:on
 
         return content.substring(17, 53);
     }
@@ -89,15 +90,8 @@ public class DoctorControllerTest {
     }
 
     @Test
-    public void saveDoctorTest() throws  Exception {
-        Doctor doctor =
-                new Doctor("Teste", "Teste",
-                        "teste@test.com",
-                        true,
-                        Doctor.STATUS_AVAILABLE,
-                        specialtyService.specialtyAll().get(0),
-                        regionService.regionAll().get(0),
-                        regionService.regionAll().get(0).getCities().get(0));
+    public void saveDoctorTest() throws Exception {
+        Doctor doctor = simpleCreteDoctor();
 
         mvc.perform(post("/doctor/save")
                 .contentType(MediaType.APPLICATION_JSON)
@@ -106,8 +100,57 @@ public class DoctorControllerTest {
                 .andExpect(status().isCreated());
     }
 
+    private Doctor simpleCreteDoctor(){
+        return new Doctor("teste", "teste",
+                "teste@test.com",
+                true,
+                Doctor.STATUS_AVAILABLE,
+                specialtyService.specialtyAll().get(0),
+                regionService.regionAll().get(0),
+                regionService.regionAll().get(0).getCities().get(0));
+    }
+
+    private Doctor saveSimpleCreteDoctor(){
+        return doctorService.doctorSave(simpleCreteDoctor());
+    }
+
     @Test
-    public void saveDoctorTestInvalid() throws  Exception {
+    public void saveDoctorEmailAlreadyExistsTest() throws Exception {
+        Doctor doctor = saveSimpleCreteDoctor();
+        doctor.setId(null);
+
+        mvc.perform(post("/doctor/save")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(doctor))
+                .header("Authorization", "Bearer " + this.access_token))
+                .andExpect(status().isConflict());
+    }
+
+    @Test
+    public void updateDoctorTest() throws Exception {
+        Doctor doctor = saveSimpleCreteDoctor();
+        doctor.setLastName("TestUpdate");
+
+        mvc.perform(post("/doctor/save")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(doctor))
+                .header("Authorization", "Bearer " + this.access_token))
+                .andExpect(status().isOk());
+    }
+
+    @Test
+    public void doctorFindByEmailTest() throws Exception {
+        String email = saveSimpleCreteDoctor().getEmail();
+        mvc.perform(get("/doctor/get/email")
+                .param("email", email)
+                .header("Authorization", "Bearer " + this.access_token))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andExpect(jsonPath("$.email", is(equalTo(email))));
+    }
+
+    @Test
+    public void saveDoctorTestInvalid() throws Exception {
         Doctor doctor =
                 new Doctor("     ", "Teste",
                         "teste2@test.com",

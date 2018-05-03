@@ -34,64 +34,7 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DoctorControllerTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/exam/maisvida/med/br/DoctorControllerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="51" column="86" lean-forward="true" selection-start-line="51" selection-start-column="86" selection-end-line="51" selection-end-column="86" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimpleCORSFilter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/filter/SimpleCORSFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="32" column="35" lean-forward="true" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Doctor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/model/Doctor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
-              <folding>
-                <element signature="e#646#647#0" expanded="true" />
-                <element signature="e#688#689#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DoctorService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/service/DoctorService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="182" column="42" selection-start-line="182" selection-start-column="42" selection-end-line="182" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#doctorDelete#0;class#DoctorService#0" />
-                <element signature="method#doctorFindByEmail#0;class#DoctorService#0" />
-                <element signature="method#doctorFindByFirstName#0;class#DoctorService#0" />
-                <element signature="method#doctorFindByLastName#0;class#DoctorService#0" />
-                <element signature="method#doctorFindByStatus#0;class#DoctorService#0" />
-                <element signature="method#doctorFindByActive#0;class#DoctorService#0" />
-                <element signature="method#doctorFindByState#0;class#DoctorService#0" />
-                <element signature="method#doctorFindByCity#0;class#DoctorService#0" />
-                <element signature="e#6302#6303#0" expanded="true" />
-                <element signature="e#6338#6339#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -582,25 +525,31 @@
         <option value="$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/repository/RoleRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/controller/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/config/SwaggerConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/controller/DoctorController.java" />
         <option value="$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/service/LoginService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/controller/RegionController.java" />
         <option value="$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/controller/RoleController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/controller/SpecialtyController.java" />
         <option value="$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/service/SpecialtyService.java" />
         <option value="$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/service/RoleService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/validator/Validator.java" />
         <option value="$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/service/CityService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/service/RegionService.java" />
         <option value="$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/config/PopulateDataBase.java" />
         <option value="$PROJECT_DIR$/src/test/java/exam/maisvida/med/br/HomeControllerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/model/Doctor.java" />
-        <option value="$PROJECT_DIR$/src/test/java/exam/maisvida/med/br/DoctorControllerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/service/DoctorService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/controller/DoctorController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/model/User.java" />
+        <option value="$PROJECT_DIR$/src/test/java/exam/maisvida/med/br/RoleControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/exam/maisvida/med/br/DoctorControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/exam/maisvida/med/br/LoginControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/exam/maisvida/med/br/UserControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/controller/RegionController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/service/RegionService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/exam/maisvida/med/br/RegionControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/validator/Validator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/controller/SpecialtyController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/exam/maisvida/med/br/SpecialtyControllerTest.java" />
       </list>
     </option>
   </component>
@@ -659,69 +608,13 @@
               <item name="api-rest" type="b2602c69:ProjectViewProjectNode" />
               <item name="api-rest" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
-            <path>
-              <item name="api-rest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-rest" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-rest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-rest" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-rest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-rest" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-rest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-rest" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="br" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-rest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-rest" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="br" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-rest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-rest" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-rest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-rest" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-rest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-rest" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="br" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -746,19 +639,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DoctorControllerTest">
+  <component name="RunManager" selected="JUnit.exam.maisvida.med.br in api-rest_test">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="build" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
-      <module name="api-rest" />
-      <setting name="path" value="file://$PROJECT_DIR$/build.gradle" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$" />
-      <setting name="debug" value="false" />
-    </configuration>
-    <configuration name="DoctorControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RegionControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="api-rest_test" />
       <extension name="coverage">
         <pattern>
@@ -769,7 +654,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="exam.maisvida.med.br" />
-      <option name="MAIN_CLASS_NAME" value="exam.maisvida.med.br.DoctorControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="exam.maisvida.med.br.RegionControllerTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -781,7 +666,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="DoctorControllerTest.saveDoctorTestInvalid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RegionControllerTest.updateRegionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="api-rest_test" />
       <extension name="coverage">
         <pattern>
@@ -792,8 +677,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="exam.maisvida.med.br" />
-      <option name="MAIN_CLASS_NAME" value="exam.maisvida.med.br.DoctorControllerTest" />
-      <option name="METHOD_NAME" value="saveDoctorTestInvalid" />
+      <option name="MAIN_CLASS_NAME" value="exam.maisvida.med.br.RegionControllerTest" />
+      <option name="METHOD_NAME" value="updateRegionTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -804,7 +689,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="HomeControllerTest.getHello" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SpecialtyControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="api-rest_test" />
       <extension name="coverage">
         <pattern>
@@ -815,9 +700,32 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="exam.maisvida.med.br" />
-      <option name="MAIN_CLASS_NAME" value="exam.maisvida.med.br.HomeControllerTest" />
-      <option name="METHOD_NAME" value="getHello" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="exam.maisvida.med.br.SpecialtyControllerTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="UserControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="api-rest_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="exam.maisvida.med.br.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="exam.maisvida.med.br" />
+      <option name="MAIN_CLASS_NAME" value="exam.maisvida.med.br.UserControllerTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -834,6 +742,29 @@
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="exam.maisvida.med.br in api-rest_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="api-rest_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="exam.maisvida.med.br.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="exam.maisvida.med.br" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -872,17 +803,19 @@
     </configuration>
     <list>
       <item itemvalue="Spring Boot.Application" />
-      <item itemvalue="Groovy.build" />
-      <item itemvalue="JUnit.HomeControllerTest.getHello" />
-      <item itemvalue="JUnit.DoctorControllerTest" />
-      <item itemvalue="JUnit.DoctorControllerTest.saveDoctorTestInvalid" />
+      <item itemvalue="JUnit.UserControllerTest" />
+      <item itemvalue="JUnit.RegionControllerTest" />
+      <item itemvalue="JUnit.RegionControllerTest.updateRegionTest" />
+      <item itemvalue="JUnit.SpecialtyControllerTest" />
+      <item itemvalue="JUnit.exam.maisvida.med.br in api-rest_test" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DoctorControllerTest" />
-        <item itemvalue="JUnit.DoctorControllerTest.saveDoctorTestInvalid" />
-        <item itemvalue="JUnit.HomeControllerTest.getHello" />
-        <item itemvalue="Groovy.build" />
+        <item itemvalue="JUnit.exam.maisvida.med.br in api-rest_test" />
+        <item itemvalue="JUnit.SpecialtyControllerTest" />
+        <item itemvalue="JUnit.RegionControllerTest" />
+        <item itemvalue="JUnit.RegionControllerTest.updateRegionTest" />
+        <item itemvalue="JUnit.UserControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -900,78 +833,80 @@
       <workItem from="1525055714438" duration="1710000" />
       <workItem from="1525057507842" duration="1951000" />
       <workItem from="1525133304978" duration="23966000" />
+      <workItem from="1525271679421" duration="12103000" />
+      <workItem from="1525309108726" duration="1936000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DoctorControllerTest - 2018.05.02 at 01h 12m 47s.xml">
-      <configuration name="DoctorControllerTest" configurationId="JUnit" />
+    <history-entry file="RegionControllerTest_updateRegionTest - 2018.05.02 at 21h 48m 47s.xml">
+      <configuration name="RegionControllerTest.updateRegionTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DoctorControllerTest - 2018.05.02 at 01h 16m 01s.xml">
-      <configuration name="DoctorControllerTest" configurationId="JUnit" />
+    <history-entry file="RegionControllerTest_updateRegionTest - 2018.05.02 at 21h 49m 50s.xml">
+      <configuration name="RegionControllerTest.updateRegionTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DoctorControllerTest - 2018.05.02 at 01h 17m 07s.xml">
-      <configuration name="DoctorControllerTest" configurationId="JUnit" />
+    <history-entry file="RegionControllerTest - 2018.05.02 at 21h 50m 40s.xml">
+      <configuration name="RegionControllerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DoctorControllerTest - 2018.05.02 at 01h 18m 16s.xml">
-      <configuration name="DoctorControllerTest" configurationId="JUnit" />
+    <history-entry file="RegionControllerTest - 2018.05.02 at 22h 01m 42s.xml">
+      <configuration name="RegionControllerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DoctorControllerTest - 2018.05.02 at 01h 19m 10s.xml">
-      <configuration name="DoctorControllerTest" configurationId="JUnit" />
+    <history-entry file="RegionControllerTest - 2018.05.02 at 22h 04m 04s.xml">
+      <configuration name="RegionControllerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DoctorControllerTest - 2018.05.02 at 01h 20m 11s.xml">
-      <configuration name="DoctorControllerTest" configurationId="JUnit" />
+    <history-entry file="RegionControllerTest - 2018.05.02 at 22h 06m 14s.xml">
+      <configuration name="RegionControllerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DoctorControllerTest_saveDoctorTestInvalid - 2018.05.02 at 01h 22m 07s.xml">
-      <configuration name="DoctorControllerTest.saveDoctorTestInvalid" configurationId="JUnit" />
+    <history-entry file="RegionControllerTest - 2018.05.02 at 22h 07m 39s.xml">
+      <configuration name="RegionControllerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DoctorControllerTest - 2018.05.02 at 01h 23m 00s.xml">
-      <configuration name="DoctorControllerTest" configurationId="JUnit" />
+    <history-entry file="RegionControllerTest - 2018.05.02 at 22h 09m 41s.xml">
+      <configuration name="RegionControllerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DoctorControllerTest - 2018.05.02 at 01h 24m 09s.xml">
-      <configuration name="DoctorControllerTest" configurationId="JUnit" />
+    <history-entry file="SpecialtyControllerTest - 2018.05.02 at 22h 18m 13s.xml">
+      <configuration name="SpecialtyControllerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DoctorControllerTest - 2018.05.02 at 01h 26m 08s.xml">
-      <configuration name="DoctorControllerTest" configurationId="JUnit" />
+    <history-entry file="exam_maisvida_med_br_in_api-rest_test - 2018.05.02 at 22h 19m 18s.xml">
+      <configuration name="exam.maisvida.med.br in api-rest_test" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28798000" />
+    <option name="totallyTimeSpent" value="42837000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="725" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32850242" />
-      <window_info active="true" anchor="right" id="Maven Projects" order="3" visible="true" weight="0.329429" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info id="Capture Tool" order="2" />
+      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" weight="0.32850242" />
+      <window_info anchor="right" id="Maven Projects" order="10" weight="0.24816984" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Database" order="5" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
+      <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32850242" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="bottom" id="Java Enterprise" order="7" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.43961352" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32850242" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="bottom" id="Java Enterprise" order="10" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Version Control" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30273753" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22547585" />
-      <window_info anchor="right" id="Bean Validation" order="3" />
-      <window_info id="Web" order="2" side_tool="true" />
-      <window_info anchor="right" id="Gradle" order="3" weight="0.329429" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22547585" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info id="Web" order="6" side_tool="true" />
+      <window_info anchor="right" id="Gradle" order="6" weight="0.329429" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.32850242" />
+      <window_info anchor="bottom" id="Build" order="12" weight="0.32850242" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -985,10 +920,32 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="6" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/service/DoctorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="182" column="42" selection-start-line="182" selection-start-column="42" selection-end-line="182" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#doctorSave#0;class#DoctorService#0" />
+            <element signature="method#doctorDelete#0;class#DoctorService#0" />
+            <element signature="method#doctorAll#0;class#DoctorService#0" />
+            <element signature="method#doctorFindByEmail#0;class#DoctorService#0" />
+            <element signature="method#doctorFindByFirstName#0;class#DoctorService#0" />
+            <element signature="method#doctorFindByLastName#0;class#DoctorService#0" />
+            <element signature="method#doctorFindByStatus#0;class#DoctorService#0" />
+            <element signature="method#doctorFindByActive#0;class#DoctorService#0" />
+            <element signature="method#doctorFindByState#0;class#DoctorService#0" />
+            <element signature="method#doctorFindByCity#0;class#DoctorService#0" />
+            <element signature="e#6302#6303#0" expanded="true" />
+            <element signature="e#6351#6352#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1007,9 +964,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1024,9 +978,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="79" selection-start-line="21" selection-start-column="79" selection-end-line="21" selection-end-column="79" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1055,9 +1006,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1107,71 +1055,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/service/LoginService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#authenticate#0;class#LoginService#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/controller/RegionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="40" column="1" lean-forward="true" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
-          <folding>
-            <element signature="method#regionSave#0;class#RegionController#0" />
-            <element signature="method#regionDelete#0;class#RegionController#0" />
-            <element signature="method#regionAll#0;class#RegionController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/controller/RoleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/controller/SpecialtyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
-          <folding>
-            <element signature="method#specialtySave#0;class#SpecialtyController#0" />
-            <element signature="method#specialtyDelete#0;class#SpecialtyController#0" />
-            <element signature="method#specialtyAll#0;class#SpecialtyController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-          <folding>
-            <element signature="method#userSave#0;class#UserController#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1197,9 +1080,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1231,29 +1111,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/validator/Validator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="81" column="48" selection-start-line="81" selection-start-column="48" selection-end-line="81" selection-end-column="48" />
-          <folding>
-            <element signature="method#doctorExistsByEmail#0;class#Validator#0" />
-            <element signature="method#roleExistsByEmail#0;class#Validator#0" />
-            <element signature="method#fieldsWereFilled#0;class#Validator#0" />
-            <element signature="method#fieldIsValid#0;class#Validator#0" />
-            <element signature="method#doctorIsValid#0;class#Validator#0" />
-            <element signature="e#2479#2480#0" expanded="true" />
-            <element signature="e#2519#2520#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/service/CityService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1271,42 +1128,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="445">
           <caret line="41" column="16" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
-          <folding>
-            <element signature="e#1394#1395#0" expanded="true" />
-            <element signature="e#1436#1437#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/service/RegionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="69" column="5" lean-forward="true" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#regionSave#0;class#RegionService#0" />
-            <element signature="method#save#0;class#RegionService#0" />
-            <element signature="method#regionDelete#0;class#RegionService#0" />
-            <element signature="method#regionAll#0;class#RegionService#0" />
-            <element signature="e#3388#3389#0" expanded="true" />
-            <element signature="e#3426#3427#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/config/PopulateDataBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="59" column="33" selection-start-line="59" selection-start-column="33" selection-end-line="59" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#run#0;class#PopulateDataBase#0" />
-            <element signature="method#populateRole#0;class#PopulateDataBase#0" />
-            <element signature="method#populateUser#0;class#PopulateDataBase#0" />
-            <element signature="method#populateCity#0;class#PopulateDataBase#0" />
-            <element signature="method#populateRegion#0;class#PopulateDataBase#0" />
-            <element signature="method#populateSpecialty#0;class#PopulateDataBase#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1317,30 +1138,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/exam/maisvida/med/br/HomeControllerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/model/Doctor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="29" selection-end-column="5" />
+        <state relative-caret-position="495">
+          <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/filter/SimpleCORSFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/exception/ObjectAlreadyExistsException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="8" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#314#315#0" expanded="true" />
+            <element signature="e#346#347#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/controller/DoctorController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/service/DoctorService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        <state relative-caret-position="121">
+          <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
           <folding>
-            <element signature="method#doctorDelete#0;class#DoctorController#0" />
-            <element signature="method#doctorAll#0;class#DoctorController#0" />
-            <element signature="method#doctorFindByEmail#0;class#DoctorController#0" />
-            <element signature="method#doctorFindByFirstName#0;class#DoctorController#0" />
-            <element signature="method#doctorFindByLastName#0;class#DoctorController#0" />
-            <element signature="method#doctorFindByStatus#0;class#DoctorController#0" />
-            <element signature="method#doctorFindByActive#0;class#DoctorController#0" />
-            <element signature="method#doctorFindByState#0;class#DoctorController#0" />
-            <element signature="method#doctorFindByCity#0;class#DoctorController#0" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#doctorSave#0;class#DoctorService#0" />
+            <element signature="method#doctorDelete#0;class#DoctorService#0" />
+            <element signature="method#doctorAll#0;class#DoctorService#0" />
+            <element signature="method#doctorFindByEmail#0;class#DoctorService#0" />
+            <element signature="method#doctorFindByFirstName#0;class#DoctorService#0" />
+            <element signature="method#doctorFindByLastName#0;class#DoctorService#0" />
+            <element signature="method#doctorFindByStatus#0;class#DoctorService#0" />
+            <element signature="method#doctorFindByActive#0;class#DoctorService#0" />
+            <element signature="method#doctorFindByState#0;class#DoctorService#0" />
+            <element signature="method#doctorFindByCity#0;class#DoctorService#0" />
+            <element signature="e#6302#6303#0" expanded="true" />
+            <element signature="e#6351#6352#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/5.0.5.RELEASE/970a3ead6eb81f6d67967913bf915f7565d1a39f/spring-test-5.0.5.RELEASE-sources.jar!/org/springframework/test/context/junit4/SpringJUnit4ClassRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="136" selection-start-line="136" selection-end-line="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/service/LoginService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1356,50 +1213,207 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/model/Doctor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+        <state relative-caret-position="210">
+          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/controller/RoleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/controller/DoctorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/exam/maisvida/med/br/HomeControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="29" selection-end-column="5" />
           <folding>
-            <element signature="e#646#647#0" expanded="true" />
-            <element signature="e#688#689#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/filter/SimpleCORSFilter.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/exam/maisvida/med/br/LoginControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="32" column="35" lean-forward="true" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
+        <state relative-caret-position="105">
+          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/service/DoctorService.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/exam/maisvida/med/br/RoleControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="182" column="42" selection-start-line="182" selection-start-column="42" selection-end-line="182" selection-end-column="42" />
+        <state relative-caret-position="303">
+          <caret line="70" column="23" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#doctorDelete#0;class#DoctorService#0" />
-            <element signature="method#doctorFindByEmail#0;class#DoctorService#0" />
-            <element signature="method#doctorFindByFirstName#0;class#DoctorService#0" />
-            <element signature="method#doctorFindByLastName#0;class#DoctorService#0" />
-            <element signature="method#doctorFindByStatus#0;class#DoctorService#0" />
-            <element signature="method#doctorFindByActive#0;class#DoctorService#0" />
-            <element signature="method#doctorFindByState#0;class#DoctorService#0" />
-            <element signature="method#doctorFindByCity#0;class#DoctorService#0" />
-            <element signature="e#6302#6303#0" expanded="true" />
-            <element signature="e#6338#6339#0" expanded="true" />
+            <element signature="method#getAccessToken#0;class#RoleControllerTest#0" />
+            <element signature="method#getAllTest#0;class#RoleControllerTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="25" column="61" lean-forward="true" selection-start-line="25" selection-start-column="61" selection-end-line="25" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/config/PopulateDataBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="59" column="33" selection-start-line="59" selection-start-column="33" selection-end-line="59" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="20" column="47" lean-forward="true" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/exam/maisvida/med/br/UserControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="70" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getAccessToken#0;class#UserControllerTest#0" />
+            <element signature="method#userSaveTest#0;class#UserControllerTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/model/Region.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/controller/RegionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="21" column="73" selection-start-line="21" selection-start-column="73" selection-end-line="21" selection-end-column="73" />
+          <folding>
+            <element signature="method#regionSave#0;class#RegionController#0" />
+            <element signature="method#regionDelete#0;class#RegionController#0" />
+            <element signature="method#regionAll#0;class#RegionController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/service/RegionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#executeSave#0;class#RegionService#0" />
+            <element signature="method#citiesToAdd#0;class#RegionService#0" />
+            <element signature="method#save#0;class#RegionService#0" />
+            <element signature="method#regionDelete#0;class#RegionService#0" />
+            <element signature="method#regionAll#0;class#RegionService#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/validator/Validator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="72" column="41" lean-forward="true" selection-start-line="72" selection-start-column="41" selection-end-line="72" selection-end-column="41" />
+          <folding>
+            <element signature="method#doctorExistsByEmail#0;class#Validator#0" />
+            <element signature="method#roleExistsByEmail#0;class#Validator#0" />
+            <element signature="method#fieldIsValid#0;class#Validator#0" />
+            <element signature="method#doctorIsValid#0;class#Validator#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/exam/maisvida/med/br/controller/SpecialtyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="21" column="85" selection-start-line="21" selection-start-column="85" selection-end-line="21" selection-end-column="85" />
+          <folding>
+            <element signature="method#specialtySave#0;class#SpecialtyController#0" />
+            <element signature="method#specialtyDelete#0;class#SpecialtyController#0" />
+            <element signature="method#specialtyAll#0;class#SpecialtyController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/exam/maisvida/med/br/SpecialtyControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-75">
+          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+          <folding>
+            <element signature="method#setUp#0;class#SpecialtyControllerTest#0" />
+            <element signature="method#getAccessToken#0;class#SpecialtyControllerTest#0" />
+            <element signature="method#getAllTest#0;class#SpecialtyControllerTest#0" />
+            <element signature="method#saveRegionTest#0;class#SpecialtyControllerTest#0" />
+            <element signature="method#saveRegionStateAlreadyExistsTest#0;class#SpecialtyControllerTest#0" />
+            <element signature="method#updateRegionTest#0;class#SpecialtyControllerTest#0" />
+            <element signature="method#saveRegionTestInvalid#0;class#SpecialtyControllerTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/exam/maisvida/med/br/RegionControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="139" column="5" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="139" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setUp#0;class#RegionControllerTest#0" />
+            <element signature="method#getAccessToken#0;class#RegionControllerTest#0" />
+            <element signature="method#getAllTest#0;class#RegionControllerTest#0" />
+            <element signature="method#saveRegionTest#0;class#RegionControllerTest#0" />
+            <element signature="method#simpleCreteRegion#0;class#RegionControllerTest#0" />
+            <element signature="method#saveRegionStateAlreadyExistsTest#0;class#RegionControllerTest#0" />
+            <element signature="method#updateRegionTest#0;class#RegionControllerTest#0" />
+            <element signature="method#saveRegionTestInvalid#0;class#RegionControllerTest#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/exam/maisvida/med/br/DoctorControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="51" column="86" lean-forward="true" selection-start-line="51" selection-start-column="86" selection-end-line="51" selection-end-column="86" />
+        <state relative-caret-position="15">
+          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="31" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#setUp#0;class#DoctorControllerTest#0" />
+            <element signature="method#getAccessToken#0;class#DoctorControllerTest#0" />
+            <element signature="method#getAllTest#0;class#DoctorControllerTest#0" />
+            <element signature="method#saveDoctorTest#0;class#DoctorControllerTest#0" />
+            <element signature="method#simpleCreteDoctor#0;class#DoctorControllerTest#0" />
+            <element signature="method#saveDoctorEmailAlreadyExistsTest#0;class#DoctorControllerTest#0" />
+            <element signature="method#updateDoctorTest#0;class#DoctorControllerTest#0" />
+            <element signature="method#doctorFindByEmailTest#0;class#DoctorControllerTest#0" />
+            <element signature="method#saveDoctorTestInvalid#0;class#DoctorControllerTest#0" />
           </folding>
         </state>
       </provider>

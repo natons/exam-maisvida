@@ -21,8 +21,9 @@ public class LoginController {
     public ResponseEntity<User> authenticate(@RequestBody User user) {
 
         User userFind = service.authenticate(user);
+        HttpStatus status = userFind == null ? HttpStatus.NOT_FOUND : HttpStatus.OK;
 
-        return new ResponseEntity<>(userFind, HttpStatus.CREATED);
+        return new ResponseEntity<>(userFind, status);
 
     }
 }

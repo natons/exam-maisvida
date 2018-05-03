@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: exam.maisvida.med.br.DoctorControllerTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.545 s - in exam.maisvida.med.br.DoctorControllerTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.293 s - in exam.maisvida.med.br.DoctorControllerTest

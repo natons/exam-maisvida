@@ -18,11 +18,10 @@ public class DoctorController {
 
     @PostMapping("/save")
     public ResponseEntity<Doctor> doctorSave(@RequestBody Doctor doctor) {
-
+        HttpStatus status = doctor.getId() == null ? HttpStatus.CREATED : HttpStatus.OK;
         doctor = service.doctorSave(doctor);
 
-        return new ResponseEntity<>(doctor, HttpStatus.CREATED);
-
+        return new ResponseEntity<>(doctor, status);
     }
 
     @DeleteMapping("/delete")

@@ -19,8 +19,9 @@ public class UserController {
 
     @PostMapping("/save")
     public ResponseEntity<User> userSave(@RequestBody User user) {
+        HttpStatus status = user.getId() == null ? HttpStatus.CREATED : HttpStatus.OK;
         user = service.userSave(user);
 
-        return new ResponseEntity<>(user, HttpStatus.CREATED);
+        return new ResponseEntity<>(user, status);
     }
 }

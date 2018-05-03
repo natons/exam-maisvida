@@ -89,6 +89,7 @@ export class FormUserComponent {
     } else {
       this.formError.roles.active = false;
       this.formError.roles.message = "";
+      this.formGroup.controls['isUser'].setErrors(null);
     }
  
     if (!this.formGroup.valid) {
